@@ -64,6 +64,7 @@ const Sharing = () => {
       body: JSON.stringify({ email, hash}), // Sending email in the request body
      
   });
+  console.log(response)
   // if(response){
   //   console.log(response.data.json())
   // }

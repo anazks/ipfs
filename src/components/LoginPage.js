@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../Style/LoginPage.css";
-import { faL } from "@fortawesome/free-solid-svg-icons";
+// import { faL } from "@fortawesome/free-solid-svg-icons";
 
 const LoginPage = () => {
   const [time, setTime] = useState(new Date());

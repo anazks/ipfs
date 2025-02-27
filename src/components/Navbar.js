@@ -19,6 +19,7 @@ const Navbar = () => {
         console.log("Decoded Token Data:", decodedData);
 
         setAdminId(decodedData.adminId); // Extract and set adminId
+        console.log(adminId)
         localStorage.setItem("userId",decodedData.adminId)
       } catch (error) {
         console.error('Error decoding token:', error);
