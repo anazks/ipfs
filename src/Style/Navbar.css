@@ -1,0 +1,84 @@
+/* src/components/Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  background: #333;
+  color: white;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo-image {
+  height: 100px; /* Adjust as needed */
+  width: auto;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #2575fc;
+}
+
+/* Logout button styles */
+.logout-button {
+  margin-left: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #ff4d4d; /* Light red for logout */
+  border: none;
+  border-radius: 50px; /* Makes the button round */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #e60000; /* Darker red on hover */
+  transform: scale(1.05); /* Button grows slightly */
+}
+
+.logout-button:focus {
+  outline: none;
+}
+
+/* Login button styles */
+.login-button {
+  margin-left: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #2575fc; /* Blue color for login */
+  border: none;
+  border-radius: 50px; /* Makes the button round */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #1a61c1; /* Darker blue on hover */
+  transform: scale(1.05); /* Button grows slightly */
+}
+
+.login-button:focus {
+  outline: none;
+}
+
+.navbar-links a, .logout-button, .login-button {
+  font-weight: 600;
+}

@@ -1,0 +1,145 @@
+
+  /* Shape Animation */
+  @keyframes moveShapes {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(50px, 50px);
+    }
+    50% {
+      transform: translate(100px, 0);
+    }
+    75% {
+      transform: translate(50px, -50px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  .shape {
+    position: absolute;
+    background-color: #3498db;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    animation: moveShapes 6s infinite ease-in-out;
+  }
+  
+  .shape:nth-child(odd) {
+    background-color: #e74c3c;
+    animation-duration: 7s;
+  }
+  
+  .shape:nth-child(even) {
+    background-color: #f39c12;
+    animation-duration: 5s;
+  }
+  
+  /* Positioning for Shapes */
+  .shape-container {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    z-index: -1;
+  }
+  
+  .shape-container .shape:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .shape-container .shape:nth-child(2) {
+    animation-delay: 1s;
+  }
+  
+  .shape-container .shape:nth-child(3) {
+    animation-delay: 2s;
+  }
+  
+  .shape-container .shape:nth-child(4) {
+    animation-delay: 3s;
+  }
+  
+  /* Layout for File List - 3 boxes in a row */
+  .file-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* File Cards with Distinct Colors */
+  .file-card {
+    background: #2980b9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Different background colors for each card */
+  .file-card:nth-child(1) {
+    background: #e74c3c;
+  }
+  
+  .file-card:nth-child(2) {
+    background: #3498db;
+  }
+  
+  .file-card:nth-child(3) {
+    background: #f39c12;
+  }
+  
+  .file-card:nth-child(4) {
+    background: #2ecc71;
+  }
+  
+  .file-card h3 {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  
+  .file-card p {
+    color: #ddd;
+    margin-bottom: 5px;
+  }
+  
+  .file-card .ipfs-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .file-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  }
+  
+  .file-card .ipfs-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .file-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .file-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  

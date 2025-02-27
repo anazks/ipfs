@@ -1,0 +1,363 @@
+/* Core Container */
+.login-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    display: flex;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+  }
+  .otpBtn{
+    height: 30px;
+    width: 120px;
+    background-color: orange;
+    color: white;
+    border: none;
+  }
+  /* Background Shapes */
+  .background-shapes .shape {
+    position: absolute;
+    animation: drift 10s infinite ease-in-out, fade 6s infinite alternate;
+    z-index: 1; /* Lower z-index so the shapes stay in the background */
+  }
+  
+  .circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(255, 99, 132, 0.6);
+    top: 20%;
+    left: 10%;
+  }
+  
+  .square {
+    width: 150px;
+    height: 150px;
+    background: rgba(54, 162, 235, 0.6);
+    top: 50%;
+    left: 70%;
+  }
+  
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 150px solid rgba(255, 206, 86, 0.6);
+    top: 30%;
+    left: 50%;
+  }
+  
+  .hexagon {
+    width: 150px;
+    height: 150px;
+    background: rgba(75, 192, 192, 0.6);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    top: 70%;
+    left: 20%;
+  }
+  
+  .diamond {
+    width: 100px;
+    height: 100px;
+    background: rgba(153, 102, 255, 0.6);
+    transform: rotate(45deg);
+    top: 40%;
+    left: 30%;
+  }
+  
+  /* Animations */
+  @keyframes drift {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(50px, -50px);
+    }
+    100% {
+      transform: translate(-50px, 50px);
+    }
+  }
+  
+  @keyframes fade {
+    0% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 0.3;
+    }
+  }
+  
+/* Clock Section */
+.clock-section {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack items vertically */
+    z-index: 1; /* Ensure clock section doesn't overlap inputs */
+  }
+  
+  .clock {
+    position: relative;
+    width: 300px; /* Clock size */
+    height: 300px;
+    border: 10px solid white;
+    border-radius: 50%;
+    background: #2c5364;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .clock .center-dot {
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 50%;
+    z-index: 10;
+  }
+  
+  .hand {
+    position: absolute;
+    width: 50%;
+    background: white;
+    transform-origin: 100%;
+    transform: translateX(-50%);
+  }
+  
+  .hour-hand {
+    height: 6px;
+    background: white;
+    width: 35%; /* Adjust width */
+    z-index: 3;
+  }
+  
+  .minute-hand {
+    height: 4px;
+    background: white;
+    width: 45%; /* Adjust width */
+    z-index: 2;
+  }
+  
+  .second-hand {
+    height: 2px;
+    background: red;
+    width: 50%; /* Adjust width */
+    z-index: 1;
+  }
+  
+  /* Clock Numbers */
+  .clock-number {
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+  
+  .clock-number:nth-child(1) {
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .clock-number:nth-child(2) {
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+  }
+  
+  .clock-number:nth-child(3) {
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .clock-number:nth-child(4) {
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+  }
+  
+  /* Digital Time Styling */
+  .digital-clock {
+    margin-top: 20px; /* Space between analog and digital clocks */
+    font-size: 1.5rem; /* Adjust size of digital clock */
+    font-weight: bold; /* Make it bold */
+    color: white; /* Ensure text is white */
+  }
+  
+  
+  /* Login Section */
+  .login-section {
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Ensure login section is on top */
+  }
+  
+  .login-box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative; /* Ensure z-index applies to this box */
+    z-index: 10; /* Make sure the login box is above the background shapes */
+  }
+  
+  .kepa-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .kepa-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    position: relative;
+    z-index: 10; /* Ensure inputs are above other content */
+  }
+  
+  .cta-button {
+    width: 100%;
+    padding: 0.8rem;
+    background: #ff5722;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    z-index: 10; /* Ensure the button is clickable above shapes */
+  }
+  
+  .cta-button:hover {
+    background: #e64a19;
+    transform: scale(1.05);
+  }
+  
+  /* Calendar Section */
+  .calendar-section {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Ensure calendar section doesn't overlap inputs */
+  }
+  
+  .calendar-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .calendar-box {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .calendar {
+    width: 90%;
+    max-width: 350px;
+  }
+  
+  .calendar table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .calendar th,
+  .calendar td {
+    text-align: center;
+    padding: 0.5rem;
+    border: 1px solid white;
+    color: white;
+  }
+  
+  .calendar .highlight-date {
+    background: rgba(255, 99, 132, 0.6);
+    font-weight: bold;
+    border-radius: 50%;
+  }
+  
+  /* Popup Section */
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+  }
+  
+  .popup-box {
+    background: #fff;
+    color: #000;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 300px;
+  }
+  
+  .popup-close-button {
+    padding: 0.8rem;
+    background: #ff5722;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .popup-close-button:hover {
+    background: #e64a19;
+  }
+  
+
+/* Alert Box Styles */
+.alert-box {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    border-left: 5px solid #f5c6cb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .alert-box p {
+    margin: 0;
+  }
+  
+  /* Hover effect to make alert box appear more interactive */
+  .alert-box:hover {
+    background-color: #f5b8b8;
+    color: #8b1d21;
+  }
+  

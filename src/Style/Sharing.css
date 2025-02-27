@@ -1,0 +1,112 @@
+/* Sharing Component Container */
+.sharing-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    z-index: 2;
+    text-align: center;
+  }
+  
+  /* Animated Background */
+  .animated-background .shape {
+    animation: drift 12s infinite ease-in-out, fade 8s infinite alternate;
+  }
+  
+  /* File Details Table */
+  .file-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+  }
+  
+  .file-details-table td {
+    padding: 0.8rem;
+    color: #fefefe;
+    text-align: left;
+  }
+  
+  .file-details-table td:first-child {
+    font-weight: bold;
+    width: 35%;
+  }
+  
+  .file-details-table td:nth-child(2) {
+    color: #d1d5db;
+  }
+  
+  /* Email Input Section */
+  .email-input-section {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .email-input {
+    width: 70%;
+    max-width: 300px;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    outline: none;
+    transition: border 0.3s;
+  }
+  
+  .email-input::placeholder {
+    color: #d1d5db;
+    font-style: italic;
+  }
+  
+  .email-input:focus {
+    border: 1px solid #ff5722;
+  }
+  
+  /* Share Button */
+  .share-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: #ff5722;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .share-button:hover {
+    background: #e64a19;
+    transform: scale(1.1);
+  }
+  
+  .share-button:active {
+    transform: scale(1);
+  }
+  
+  .share-button:disabled {
+    background: #888888;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .email-input-section {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .email-input {
+      width: 100%;
+    }
+  }
+  
